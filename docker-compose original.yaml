@@ -44,6 +44,9 @@ services:
     networks:
       - perplexica-network
     restart: unless-stopped
+    environment:
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - NEXT_PUBLIC_WS_URL=${NEXT_PUBLIC_WS_URL}
 
 networks:
   perplexica-network:
